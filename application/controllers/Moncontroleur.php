@@ -4,7 +4,7 @@ class MonControleur extends CI_Controller {
 
 	function __construct(){
 		parent :: __construct();
-		
+
 	}
 
 	/**
@@ -24,7 +24,8 @@ class MonControleur extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('Layout');
+		$data["test"] = "test";
+		$this->load->view('Layout',$data);
 	}
 
 }

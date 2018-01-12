@@ -11,6 +11,10 @@
       Voici ma variable: <?php echo $variable ?>
 
       <br /><br />
+
+      Voici ma variable test: <?php echo $test ?>
+
+      <br /><br />
 Voici mon tableau :
       <?php foreach ($tableau as $key => $value){
         echo $value;
