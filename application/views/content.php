@@ -7,7 +7,16 @@
   </head>
   <body>
     <div class="bienvenu">
-      ceci est mon test!!!
+    <h2>ceci est mon test!!!</h2>
+      Voici ma variable: <?php echo $variable ?>
+
+      <br /><br />
+Voici mon tableau :
+      <?php foreach ($tableau as $key => $value){
+        echo $value;
+      } {
+        # code...
+      } ?>
     </div>
   </body>
 </html>

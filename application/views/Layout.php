@@ -1,4 +1,7 @@
-<h1>Conteneur principal</h1>
+<center><h1>Conteneur principal</h1></center>
 <?php
-    $this->load->view("content");
+
+$data["variable"] = "prout";
+$data["tableau"] = ["Derieu ","Vincent ","3 rue des grands champs ","93470 ","Coubron"];
+    $this->load->view("content",$data);
  ?>
