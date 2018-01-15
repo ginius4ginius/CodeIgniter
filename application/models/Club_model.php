@@ -1,12 +1,12 @@
 <?php
 Class Club_model extends CI_Model {
 
-var $id = ´´ ;
-var $nomClub = ´´;
-var $villeClub = ´´;
-var $paysClub = ´´;
-var $siteClub = ´´;
-var $ligue = ´´;
+var $id;
+var $nomClub;
+var $villeClub;
+var $paysClub;
+var $siteClub;
+var $ligue;
 
 
 function __construct ()
