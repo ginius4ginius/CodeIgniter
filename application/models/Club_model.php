@@ -12,12 +12,12 @@ var $ligue = ´´;
 function __construct ()
 {
 parent:: __construct ();
-
+$this->load->database();
 }
 
-public Function gelAll()
+public function gelAll()
 {
-  $this->load->database();
+
   $query = $this->db->get('club');
   return $query->result() ;
 

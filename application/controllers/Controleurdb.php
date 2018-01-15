@@ -27,8 +27,8 @@ class Controleurdb extends CI_Controller {
 	 */
 	public function index()
 	{
-
-    $data["table"] =  $this->Club_model->gelAll();
+    $bloc =  $this->Club_model->gelAll();
+    $data["table"] = $bloc;
 
 		$this->load->view('affichage',$data);
 	}
