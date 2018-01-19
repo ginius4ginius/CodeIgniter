@@ -10,32 +10,32 @@ Nom :
 <br />
 <?php echo form_input(['type' => "nom",
               'name' => "nom",
-            'value' => set_value("nom")]);?>
+            'value' => set_value("table["nom"]")]);?>
 <br />
 Ville :
 <br />
 <?php echo form_input(['type' => "ville",
               'name' => "ville",
-            'value' => set_value("ville")]);?>
+            'value' => set_value("table["ville"]")]);?>
 <br />
 Pays :
 <br />
 <?php echo form_input(['type' => "pays",
               'name' => "pays",
-            'value' => set_value("pays")]);?>
+            'value' => set_value("table["pays"]")]);?>
 <br />
 Site :
 <br />
 <?php echo form_input(['type' => "site",
               'name' => "site",
-            'value' => set_value("site")]);?>
+            'value' => set_value("table["site"]")]);?>
 <br />
 Ligue :
 <br />
 <?php echo form_input(['type' => "ligue",
               'name' => "ligue",
               'value' => "ligue",
-            'value' => set_value("ligue")]);?>
+            'value' => set_value("table["ligue"]")]);?>
 <br />
 <br />
 <?php

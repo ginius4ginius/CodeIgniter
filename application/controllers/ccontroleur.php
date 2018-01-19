@@ -11,7 +11,7 @@ class Ccontroleur extends CI_Controller {
 	public function index()
 	{
 
-		$bloc =  $this->mclub->gelAll();
+		$bloc =  $this->mclub->getAll();
 		$data["table"] = $bloc;
 		$this->load->view("vaffichage",$data);
 
@@ -27,7 +27,7 @@ class Ccontroleur extends CI_Controller {
 
 	public function ajouter($aVal){
 			$this->mclub->ajouter($aVal);
-			$bloc =  $this->mclub->gelAll();
+			$bloc =  $this->mclub->getAll();
 			$data["table"] = $bloc;
 			$this->load->view("vaffichage",$data);
 	}
@@ -62,7 +62,7 @@ class Ccontroleur extends CI_Controller {
 			"paysClub"=>$this->input->post('pays'),
 			"siteClub"=>$this->input->post('site'),
 			"ligue"=>$this->input->post('ligue'));
-			
+
      $this->ajouter($aData);
 
    }

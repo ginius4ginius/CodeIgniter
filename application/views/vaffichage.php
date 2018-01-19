@@ -23,6 +23,7 @@ echo br(2);
   <td><?php echo $value->siteClub; ?></td>
   <td><?php echo $value->ligue; ?></td>
   <td><?php echo anchor("csupp/supprimer/".$vValeur,"supprimer")?></td>
+  <td><?php echo anchor("cmodif/modifier/".$vValeur,"modifier")?></td>
 
   </tr>
 

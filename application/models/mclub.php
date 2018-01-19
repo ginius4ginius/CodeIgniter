@@ -15,10 +15,30 @@ parent:: __construct ();
 }
 
 //fonction récupération de données
-public function gelAll()
+public function getAll()
 {
   $query = $this->db->get('club');
   return $query->result() ;
+}
+
+//fonction pour récupérer les données d'une ligne
+public function get($id)
+
+{
+  var_dump($id);
+  $query = $this->db->get('club', array('id' => $id));
+  var_dump($query);
+  foreach ($query as $key => $value) {
+    # code...
+
+  $data['tableau'] = array("nom"=>$query->$nom,
+"ville"=>$query->$villeClub,
+"pays"=>$query->$paysClub,
+"Site"=>$query->$siteClub,
+"ligue"=>$query->$ligue,);
+}
+var_dump($data);
+  return $data->result() ;
 }
 
 //fonction de suppression de données

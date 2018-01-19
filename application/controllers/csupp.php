@@ -16,7 +16,7 @@ class Csupp extends CI_Controller {
     $id =$this->uri->segment(3,0);
     $this->mclub->supp($id) ;
 
-    $bloc =  $this->mclub->gelAll();
+    $bloc =  $this->mclub->getAll();
     $data["table"] = $bloc;
     $this->load->view('vaffichage',$data);
   }
