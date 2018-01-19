@@ -35,7 +35,7 @@ public function get($id)
 "ville"=>$query->$villeClub,
 "pays"=>$query->$paysClub,
 "Site"=>$query->$siteClub,
-"ligue"=>$query->$ligue,);
+"ligue"=>$query->$ligue);
 }
 var_dump($data);
   return $data->result() ;
