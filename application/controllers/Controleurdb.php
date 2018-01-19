@@ -5,7 +5,7 @@ class Controleurdb extends CI_Controller {
 
 	function __construct(){
 		parent :: __construct();
-
+		$this->load->helper('form');
     $this->load->model("Club_model");
 
 	}
@@ -27,10 +27,37 @@ class Controleurdb extends CI_Controller {
 	 */
 	public function index()
 	{
-    $bloc =  $this->Club_model->gelAll();
-    $data["table"] = $bloc;
 
-		$this->load->view('affichage',$data);
+
+		$this->load->view("entree");
+
+
 	}
 
+
+	public function mkHtmlTable($aTable) {
+	  $sHtml = null;
+	  //
+	  if(is_array($aTable)) {
+	    foreach($aTable as $k=>$v) {
+	      if(is_array($v)) {
+	        if($k == 0) {
+	          $aLabels = array_keys($v);
+	          $sHtml .= '<tr><th>'.implode('</th><th>', $aLabels).'</th></tr>';
+	        }
+	        //
+	        $sHtml .= '<tr><td>'.implode('</td><td>', $v).'</td></tr>';
+	      }
+	    }
+	  }
+	  //
+	  if(!empty($sHtml))
+	    $sHtml = "<table class=\"tpListTable\" > $sHtml </table>";
+	  //
+	  return $sHtml;
+	}
+
+
+
 }
+?>
