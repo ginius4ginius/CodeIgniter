@@ -1,3 +1,9 @@
+<?php
+
+
+$this->load->view('vaffichage');
+
+?>
 <h2>insersion de données club</h2>
 
 <?php echo form_open('entree/ajout'); ?>
@@ -38,12 +44,5 @@ echo form_submit('entree','Validez');
 echo form_close();
 
 echo form_submit('affichage','Affichez');
-
-
-  $bloc =  $this->Club_model->gelAll();
-  $data["table"] = $bloc;
-  $this->load->view('affichage',$data);
-
-
 
  ?>
