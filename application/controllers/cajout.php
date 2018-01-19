@@ -13,8 +13,6 @@ class Cajout extends CI_Controller {
 
   public function ajouter()
 	{
-
-    
     $this->mclub->add($id) ;
 
     $bloc =  $this->mclub->gelAll();

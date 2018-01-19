@@ -1,9 +1,11 @@
-<p>Liste des clubs</p>
+<?php echo br(2); ?>
+
+<center><h2>Liste des clubs</h2></center>
 
 <?php
 echo br(2);
 
-echo anchor("cajout/ajouter/","Ajouter");
+echo anchor("ccontroleur/entree","Ajouter");
 
 echo br(2);
 

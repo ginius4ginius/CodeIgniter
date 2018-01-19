@@ -28,6 +28,12 @@ public function supp($id)
   $this->db->delete('club',  array('id' => $id));
 }
 
+public function ajouter($aData)
+{
+$this->db->insert('club', $aData);
+
+}
+
 
  }
 
