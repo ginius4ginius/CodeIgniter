@@ -23,22 +23,11 @@ public function getAll()
 
 //fonction pour récupérer les données d'une ligne
 public function get($id)
-
 {
-  var_dump($id);
-  $query = $this->db->get('club', array('id' => $id));
-  var_dump($query);
-  foreach ($query as $key => $value) {
-    # code...
+  $query = $this->db->get('club', array( 'id' => $id));
+return  $query->result();
 
-  $data['tableau'] = array("nom"=>$query->$nom,
-"ville"=>$query->$villeClub,
-"pays"=>$query->$paysClub,
-"Site"=>$query->$siteClub,
-"ligue"=>$query->$ligue);
-}
-var_dump($data);
-  return $data->result() ;
+
 }
 
 //fonction de suppression de données
@@ -51,6 +40,15 @@ public function supp($id)
 public function ajouter($aData)
 {
 $this->db->insert('club', $aData);
+
+}
+
+public function modifier($id,$aData)
+{
+  var_dump($id);
+
+  $this->db->where('id', $id);
+  $this->db->update('club', $aData);
 
 }
 

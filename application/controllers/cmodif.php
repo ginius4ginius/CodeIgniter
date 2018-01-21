@@ -14,9 +14,19 @@ class Cmodif extends CI_Controller {
   public function modifier()
 	{
     $id =$this->uri->segment(3,0);
-    $this->mclub->get($id) ;
+  	$data=  $this->mclub->get($id) ;
 
-    $this->load->view('ventree',$data);
+		foreach ($data as $key => $value) {
+			# code...
+	$table = array(
+	'id'=>$id,
+	"nom"=>$value->nomClub,
+	"ville"=>$value->villeClub,
+	"pays"=>$value->paysClub,
+	"Site"=>$value->siteClub,
+	"ligue"=>$value->ligue);
+	}
+    $this->load->view('vmodification',$table);
   }
 
 }
