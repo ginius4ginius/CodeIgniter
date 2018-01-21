@@ -45,7 +45,6 @@ $this->db->insert('club', $aData);
 
 public function modifier($id,$aData)
 {
-  var_dump($id);
 
   $this->db->where('id', $id);
   $this->db->update('club', $aData);

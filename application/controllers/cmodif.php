@@ -23,9 +23,10 @@ class Cmodif extends CI_Controller {
 	"nom"=>$value->nomClub,
 	"ville"=>$value->villeClub,
 	"pays"=>$value->paysClub,
-	"Site"=>$value->siteClub,
+	"site"=>$value->siteClub,
 	"ligue"=>$value->ligue);
 	}
+	var_dump($table);
     $this->load->view('vmodification',$table);
   }
 
